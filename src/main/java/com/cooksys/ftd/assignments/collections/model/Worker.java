@@ -70,4 +70,9 @@ public class Worker implements Employee {
         Worker worker = (Worker) o;
         return name.equals(worker.name) && Objects.equals(manager, worker.manager);
     }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, manager);
+    }
 }

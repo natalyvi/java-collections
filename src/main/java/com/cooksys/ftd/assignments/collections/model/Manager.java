@@ -70,4 +70,9 @@ public class Manager implements Employee {
         Manager manager1 = (Manager) o;
         return name.equals(manager1.name) && Objects.equals(manager, manager1.manager);
     }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, manager);
+    }
 }
